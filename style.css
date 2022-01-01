@@ -1,0 +1,69 @@
+body{
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    margin-top: 200px;
+}
+
+#para{
+    font-size: 30px;
+    text-align: center;
+}
+
+#newBook{
+    font-size: 33px;
+    background-color: lightblue;
+    padding: 2em;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: wrap;
+    margin-left: 792px;
+}
+
+#formDiv{
+    font-size: 26px;
+    background-color: antiquewhite;
+    padding: 20px;
+    display:none; 
+    position:fixed;
+    left: 45%;
+    top: 5%;
+    transform: -50%,5%;
+    border: 3px, solid blueviolet;
+}
+
+#submitBtn{
+    padding: 16px;
+    background-color: palevioletred;
+    font-size: 12px;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#closeBtn{
+    padding: 16px;
+    background-color: pink;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#shelf{
+    display: none;
+    margin-left: 432px;
+    min-height: 200px;
+    height: fit-content;
+    min-width: fit-content;
+    width: 900px;
+    padding: 60px;
+    border: solid blueviolet 3px;
+    border-radius: 9px;
+}
+
+#displayLib{
+    padding: 60px;
+    background-color: pink;
+    font-size: 36px;
+}

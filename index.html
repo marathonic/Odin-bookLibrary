@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!--  <h3>Click the button to add a new book to the library!</h3>
+    <div class="openBtn">
+  
+        
+    </div>
     
+    
+    <div id="popupForm">Add a new book!</div>
+-->
 
-    <script src="script.js"></script>
+<p id="para">Click the button to add a book to the library</p>
+
+<div class="openBtn">
+    <button id="newBook" onclick="popupForm()">new Book</button>
+</div>
+
+<div id="formDiv">
+    <form>
+        <label for="bookTitle">Book Title</label><br>
+        <input type="text" id="bookTitle" name="bookTitle"><br>
+        <label for="bookAuthor">Author</label><br>
+        <input type="text" id="bookAuthor" name="bookAuthor"><br>
+        <label for="pageCount">Page count</label><br>
+        <input type="text" id="pageCount" name="pageCount"><br>
+        <label for="readOrNot"> Have you read this book 100%?</label><br>
+        <input type="text" id="readOrNot" name="readOrNot"><br>
+        
+        <button type="button" id="submitBtn" onclick="storeInLibrary()">submit</button>
+        <button type="button" id="closeBtn" onclick="closeForm()">close</button>
+    </form>
+</div>
+
+
+        <!-- <button id="newBook" onclick="openBtn()">new book</button> -->
+
+<button id="displayLib" onclick="displayLibrary()">Show Library</button>
+
+
+
+<div id="shelf">
+    
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -13,19 +13,46 @@ console.log(this.info());
 
 const TuringsCathedral = new Book('Turings Cathedral', 'George Dyson', '464', 'not read');
 TuringsCathedral.prototype = Object.create(Book.prototype);
-//console.log(TuringsCathedral);
 
-//WTF is wrong with the code below
+// let library = [];
 
+// function storeInLibrary(bookObj){
+//     library.push(bookObj);
+//     console.log(library);
+// }
+
+
+
+// storeInLibrary(TuringsCathedral);
+
+// function displayLibrary(){
+//     library.forEach(element => console.table(element));
+// }
+
+// const harryPotter = new Book("Harry Potter and the sorcerer's stone", "J.K. Rowling", "223", "read");
+// //harryPotter.prototype = Object.create(Book.prototype);
+// storeInLibrary(harryPotter);
+
+// displayLibrary();
+
+//making functions for the JavaScript form
+
+function popupForm(){
+    document.getElementById('formDiv').style.display='block';
+}
+
+function closeForm(){
+    document.getElementById('formDiv').style.display='none';
+}
+
+
+//implementing the library with html divs:
 let library = [];
 
 function storeInLibrary(bookObj){
     library.push(bookObj);
     console.log(library);
-    //return library;
 }
-
-
 
 storeInLibrary(TuringsCathedral);
 
@@ -33,12 +60,22 @@ function displayLibrary(){
     library.forEach(element => console.table(element));
 }
 
-
-// function displayLibrary(){
-//     for(let book in library){
-//         console.log(this.title);
-//     }
-
-// }
+const harryPotter = new Book("Harry Potter and the sorcerer's stone", "J.K. Rowling", "223", "read");
+storeInLibrary(harryPotter);
 
 displayLibrary();
+
+//OUR CODE WORKS SO FAR! It's logging the library to the console. 
+//We need to have the Submit button inside our #newBook div create a div with the details of each -new Book object-
+
+
+
+//next we'll be putting the books in the library on a wooden shelf, but that's finishing touches
+
+const shelf = document.getElementById('shelf');
+function showShelf(){
+    shelf.style.display = 'block';
+}
+function closeShelf(){
+    shelf.style.display = 'none';
+}
