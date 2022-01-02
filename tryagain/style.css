@@ -2,3 +2,18 @@
     padding: 200px;
     font-size: 36px;
 }
+
+.shelfDivs{
+    
+    height: 350px;
+    width: 350px;
+    border: solid skyblue 3px;
+    border-radius: 6px;
+    font-size: 20px;
+
+}
+
+.textyPara{
+    font-size: 42px;
+    color: rebeccapurple;
+}
