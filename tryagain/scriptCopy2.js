@@ -17,14 +17,32 @@ let bookCover = document.createElement('p');
 
 submit.addEventListener('click', function(){
     
-    // araAra.push(title.value);
-    // araAra.push(author.value);
-
     const newEntry = new Book(title.value,  author.value);
 
-   
+    function shallowEqual(object1, object2){
+        const keys1 = Object.keys(object1);
+        const keys2 = Object.keys(object2);
 
-    araAra.push(newEntry);
+        if(keys1.length !== keys2.length){
+            return false;
+        }
+        for (let key of keys1){
+            if(object1[key] !== object2[key])   {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    if(araAra.some(item => shallowEqual(item, newEntry))){
+        return false;
+    }
+
+    else if(!araAra.some(item => shallowEqual(item, newEntry))){
+        araAra.push(newEntry);
+    }
+
+    //araAra.push(newEntry);
     console.table(araAra);
 
 
@@ -44,12 +62,23 @@ let paraBooky = document.createElement('p');
 let collection = document.createDocumentFragment();
         
 showLib.addEventListener('click', function(){
+
+    araAra.forEach(element => {
+        let divvy = document.createElement('div');
+        divvy.classList.add('shelfDivs');
+        collection.appendChild(divvy);
+        console.log(element);
+        // let entrii = document.createElement('p');
+        // entrii.textContent = element;
+        // entrii.style.fontSize = '50px';
+        // collection.appendChild(entrii);
+    });
   
     // let result = araAra.flatMap(Object.keys);
     // console.log('RESULT RETURNS: ');
     // console.log(result);
     
-
+/*
     for(let i = 0; i < araAra.length; i++){
 
         let newBooky = document.createElement('div');
@@ -64,17 +93,17 @@ showLib.addEventListener('click', function(){
     }
 
     document.getElementById('libContainer').appendChild(collection);
-    
+  */  
     
     // araAra.forEach(bk){
     //     let collection = document.createElement('p').value = bk;
     //     collection.
     // }
 
-    function removePropFromObject(araAra, title) {
-        const { [title]: _, ...rest } = araAra
-        return { ...rest }
-      }
+    // function removePropFromObject(araAra, title) {
+    //     const { [title]: _, ...rest } = araAra
+    //     return { ...rest }
+    //   }
 })
 
 // function showOff(){
